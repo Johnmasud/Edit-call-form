@@ -1,0 +1,62 @@
+using System;
+using System.Data;
+using System.Configuration;
+using System.Collections;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+using SPAR.Tools.Security;
+using SPAR.Tools.MasterControls;
+using SPAR.Tools.Utils;
+
+
+public partial class CFJWTInputs_test2 : System.Web.UI.Page
+{
+    protected string Str_Merch_no;
+
+    #region SPARUTILS
+    //code block for masterpage app, dont remove
+    SPARValues WebAppClass;
+    PromptTranslation ptAppTranslation;
+    
+    protected void Page_PreInit()
+    {
+        SPARHeader PageHeader;
+        SPARFooter PageFooter;
+        SPARBiLingualBar BiLingualBar;
+        PageHeader = (SPARHeader)this.Master.FindControl("SPARHeader1");
+        PageFooter = (SPARFooter)this.Master.FindControl("SPARFooter1");
+        BiLingualBar = (SPARBiLingualBar)this.Master.FindControl("SPARBiLingualBar1");
+        WebAppClass = new SPARValues();
+       WebAppClass.PageTitle = "";
+
+        ptAppTranslation = new PromptTranslation("CFJWTInputs.aspx", WebAppClass.PromptsLanguageId.ToString(), WebAppClass.LanguageId, WebAppClass.CurrentSQLDBConnection, WebAppClass.MultiLanguageCount);
+        AppMasterControls ap1 = new AppMasterControls(PageHeader, PageFooter, BiLingualBar, WebAppClass.LoggedUserName, WebAppClass.CurrentDBDateTime, WebAppClass.LanguageId, WebAppClass.PromptsLanguageId, WebAppClass.MultiLanguageCount, WebAppClass.PageTitle, WebAppClass.CurrentSQLDBConnection, this.Page, WebAppClass.SPARLogoFileURL);
+
+        
+        if (WebAppClass.MerchNo > 0)
+         {
+             PageFooter.ShowSPARToolsURL = false;
+             PageFooter.ShowMainPageUrl = false;
+        }
+    }
+    //protected void Page_PreRender(object sender, EventArgs e)
+    //{
+        //ptAppTranslation.DoPagePromptTranslation(this.Page);
+   // }
+
+    #endregion
+    #region events
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        Label1.Text = WebAppClass.LoggedUserId;
+
+        
+    }            
+#endregion
+
+       
+      
+}

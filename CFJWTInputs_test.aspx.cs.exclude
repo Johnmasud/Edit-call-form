@@ -1,0 +1,76 @@
+using System;
+using System.Data;
+using System.Configuration;
+using System.Collections;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+using SPAR.Tools.Security;
+using SPAR.Tools.MasterControls;
+using SPAR.Tools.Utils;
+
+
+public partial class CFJWTInputs_test : System.Web.UI.Page
+{
+    protected string Str_Merch_no;
+
+    #region SPARUTILS
+    //code block for masterpage app, dont remove
+    SPARValues WebAppClass;
+    PromptTranslation ptAppTranslation;
+    
+    protected void Page_PreInit()
+    {
+        SPARHeader PageHeader;
+        SPARFooter PageFooter;
+        SPARBiLingualBar BiLingualBar;
+        PageHeader = (SPARHeader)this.Master.FindControl("SPARHeader1");
+        PageFooter = (SPARFooter)this.Master.FindControl("SPARFooter1");
+        BiLingualBar = (SPARBiLingualBar)this.Master.FindControl("SPARBiLingualBar1");
+        //WebAppClass = new SPARValues();
+        //WebAppClass.PageTitle = "";
+
+        //ptAppTranslation = new PromptTranslation("CFJWTInputs.aspx", WebAppClass.PromptsLanguageId.ToString(), WebAppClass.LanguageId, WebAppClass.CurrentSQLDBConnection, WebAppClass.MultiLanguageCount);
+        //AppMasterControls ap1 = new AppMasterControls(PageHeader, PageFooter, BiLingualBar, WebAppClass.LoggedUserName, WebAppClass.CurrentDBDateTime, WebAppClass.LanguageId, WebAppClass.PromptsLanguageId, WebAppClass.MultiLanguageCount, WebAppClass.PageTitle, WebAppClass.CurrentSQLDBConnection, this.Page, WebAppClass.SPARLogoFileURL);
+
+        
+       // if (WebAppClass.MerchNo > 0)
+       // {
+       //     PageFooter.ShowSPARToolsURL = false;
+       //     PageFooter.ShowMainPageUrl = false;
+       // }
+    }
+    //protected void Page_PreRender(object sender, EventArgs e)
+    //{
+        //ptAppTranslation.DoPagePromptTranslation(this.Page);
+   // }
+
+    #endregion
+    #region events
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+        HttpCookie appcookies = null;
+        appcookies = HttpContext.Current.Request.Cookies["MERCHTOOLS"];        
+       // Response.Cookies.Set(new HttpCookie("LANGUAGEID", "09"));
+        // Response.Cookies.Set(new HttpCookie("MULTILANCNT", "1"));
+       //  Response.Cookies.Set(new HttpCookie("SPARTOOLSNEW", "241699925148hmufti"));
+        if (appcookies == null)
+        {
+            Response.Write("No Cookies");
+        }
+        else
+        {
+            Response.Write("appcookies=" + appcookies.Value);
+            //Str_Merch_no = Convert.ToString(WebAppClass.LoggedUserId);
+            //Label1.Text = Str_Merch_no;
+        }
+        
+    }            
+#endregion
+
+       
+      
+}

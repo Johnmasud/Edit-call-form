@@ -1,0 +1,103 @@
+﻿using System;
+using System.Data.SqlClient;
+using SPAR.Tools.MasterControls;
+
+using SPAR.Tools.Utils;
+using System.Web.UI;
+using System.Web.Configuration;
+
+/// <summary>
+/// Summary description for AppMaster
+/// Donot remove or modify any code, this code is needed to run MasterPage Properly....
+/// </summary>
+public class AppMaster
+{
+    //for standalone page
+    public AppMaster(Page AppPage)
+    {
+        AppPage.Theme = Get_ThemesName();
+    }
+    //Header Only
+    public AppMaster(SPARHeader appHeader, string sUsername, string sCurrentdatetime, string sPageTitle, Page AppPage)  
+    {
+        AppPage.Theme = Get_ThemesName();
+        Set_PageHeader(appHeader, sUsername, sCurrentdatetime,sPageTitle);       
+    }
+    //Footer Only
+    public AppMaster(SPARFooter appFooter, int iLanguageId, SqlConnection appConnection, Page AppPage)
+    {
+        AppPage.Theme = Get_ThemesName();
+        Set_PageFooter(appFooter,iLanguageId,appConnection);
+    }
+    //Bilingual Bar Only
+    public AppMaster(SPARBiLingualBar appBilingualBar, int iLanguageId, int iMultiLanguageCount, SqlConnection appConnection, Page AppPage)
+    {
+        AppPage.Theme = Get_ThemesName();
+        Set_BilingualBar(appBilingualBar, iLanguageId, iMultiLanguageCount, appConnection);
+    }
+    //Header and Footer Only
+    public AppMaster(SPARHeader appHeader, SPARFooter appFooter, string sUsername, string sCurrentdatetime, int iLanguageId, string sPageTitle, SqlConnection appConnection, Page AppPage) 
+    {
+        AppPage.Theme = Get_ThemesName();
+        Set_PageHeader(appHeader, sUsername, sCurrentdatetime,sPageTitle);
+        Set_PageFooter(appFooter, iLanguageId, appConnection);
+    }
+    //Header, Footer and Bilingual Bar
+    public AppMaster(SPARHeader appHeader, SPARFooter appFooter, SPARBiLingualBar appBilingualBar, string sUsername, string sCurrentdatetime, int iLanguageId, int iMultiLanguageCount, string sPageTitle,SqlConnection appConnection, Page AppPage)
+    {
+        AppPage.Theme = Get_ThemesName();
+        Set_PageHeader(appHeader, sUsername, sCurrentdatetime,sPageTitle);
+        Set_PageFooter(appFooter,iLanguageId,appConnection);
+        Set_BilingualBar(appBilingualBar, iLanguageId, iMultiLanguageCount, appConnection);
+    }
+    private string Get_ThemesName()
+    {
+        string sThemeName = "";        
+        if (IsGlobalTheme())
+        {
+            sThemeName = "DefaultSkin";
+        }
+        else
+        {
+            sThemeName = GetLocalThemeName();
+        }
+        return sThemeName;
+    }
+    private Boolean IsGlobalTheme()
+    {
+        Boolean sFlag = true;
+        if (WebConfigurationManager.AppSettings["ThemesName"] != null)
+        {
+            if (WebConfigurationManager.AppSettings["ThemesName"] != "Global")
+            {
+                sFlag = false;
+            }
+        }
+        return sFlag;
+    }
+    private string GetLocalThemeName()
+    {
+        string sLocalTheme = "DefaultSkin";
+        if (WebConfigurationManager.AppSettings["ThemesName"] != null)
+        {
+            if (WebConfigurationManager.AppSettings["ThemesName"] != "Global")
+            {
+                sLocalTheme = WebConfigurationManager.AppSettings["ThemesName"].ToString();
+            }
+        }
+        return sLocalTheme;
+    }
+    private void Set_PageHeader(SPARHeader appHeader, string sUsername, string sCurrentdatetime, string sPageTitle)
+    {
+        BuildSPARHeader _appHeader = new BuildSPARHeader(appHeader, sUsername, sCurrentdatetime,sPageTitle);
+    }
+    private void Set_BilingualBar(SPARBiLingualBar appBilingualBar, int iLanguageId,int iMultiLanguageCount,SqlConnection appConnection)
+    {
+        BuildBilingualBar appBBar = new BuildBilingualBar(appBilingualBar, iLanguageId, iMultiLanguageCount, appConnection);
+    }
+    private void Set_PageFooter(SPARFooter appFooter,int iLanguageId,SqlConnection appConnection)
+    {
+        BuildSPARFooter _appFooter = new BuildSPARFooter(appFooter,iLanguageId,appConnection);
+    }
+    
+}

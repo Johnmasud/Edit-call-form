@@ -1,0 +1,639 @@
+﻿BODY
+{
+	margin-left: 0;
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 0;
+	background-color: #f5fffa;
+	font-family: Arial;
+}
+.readOnly
+{
+	border-right: medium none;
+	border-top: medium none;
+	border-left: medium none;
+	border-bottom: medium none;
+	background-color: #d3d3d3;
+}
+#JWTCS_Info_POPup
+{ 
+position: absolute;
+visibility: hidden;
+overflow: hidden;
+border:1px solid #CCC;
+background-color:#F9F9F9;
+border:1px solid #333;
+padding:5px;
+}
+#ITS_MyControl_FullPageDiv
+{
+	left: 0%;
+	top: 0%;
+	position: fixed;
+	background-color: #605D5D;
+	text-align: center;
+	width: 100%;
+	opacity: .96;
+	-moz-opacity:.96;
+	filter: alpha(opacity=90); 
+	-ms-filter:"alpha(opacity=90)";
+	height: 100%;
+	visibility: hidden;
+	right: 0px;
+	bottom: 0px;
+}
+#PopUp_Wait_sign
+{ 
+position: absolute;
+  top: 100px;
+  left: 240px;
+  z-index: 100;
+visibility: hidden;
+overflow: hidden;
+border:1px solid #CCC;
+background-color:#F9F9F9;
+border:1px solid #333;
+padding:5px;
+}
+.Button_Align
+{
+	text-align: left;
+}
+.Div_Color
+{
+	background-color: #f5fffa;
+}
+.Multi_button_Color
+{
+	background-color:Red;
+} 
+.selectionCriteriaHeader
+{
+	Color: #ffffff;
+  font-size: 14;
+  font-weight: bold;
+  font-family: Arial;
+  BACKGROUND-COLOR: dodgerblue;
+  TEXT-ALIGN: center
+}
+.selectionCriteriaItem
+{
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 12px;
+	color: #000000;
+}
+.selectionCriteriaMDY
+{
+	font-weight: bold;
+	font-size: 12px;
+	color: red;
+	font-style: italic;
+}
+.reportCriteriaHeader
+{
+	font-weight: bold;
+	font-size: 12px;
+	color: red;
+}
+.reportCriteriaItem
+{
+	font-weight: bold;
+	font-size: 12px;
+	color: #000000;
+}
+.reportTableHeader
+{
+	font-weight: bold;
+	font-size: 12px;
+	color: #ffffff;
+}
+.reportTableHeadernew 
+{
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #ffffff; FONT-FAMILY: Arial; BACKGROUND-COLOR: dodgerblue; TEXT-ALIGN: center; BORDER-RIGHT-COLOR: white
+}
+.reportTableItem
+{
+	font-weight: normal;
+	font-size: 12px;
+	color: #000000;
+	background-color: transparent;
+}
+.reportAlternativeItem
+{
+	font-weight: normal;
+	font-size: 12px;
+	color: #000000;
+	background-color: #FFFFE0;
+}
+.standardText
+{
+	font-weight: normal;
+	font-size: 12px;
+	color: #000000;
+}
+.linkStyle:link
+{
+	font-size: 12px;
+	color: blue;
+	text-decoration: underline;
+}
+.linkStyle:visited
+{
+	font-size: 12px;
+	color: #800080;
+	text-decoration: underline;
+}
+.linkStyle:active
+{
+	font-size: 12px;
+	color: #1E90FF;
+	text-decoration: underline;
+}
+.linkStyle:hover
+{
+	font-size: 12px;
+	color: #1E90FF;
+	text-decoration: underline;
+}
+.copyRight
+{
+	font-weight: normal;
+	font-size: 10px;
+	color: #000080;
+}
+.Button
+{
+	border-left-color: #1E90FF;
+	border-bottom-color: #1E90FF;
+	font: 10px Arial,Tahoma,Verdana,Helvetica, sans-serif;
+	color: blue;
+	border-top-color: #1E90FF;
+	height: 24px;
+	background-color: white;
+	border-right-color: #1E90FF;
+}
+
+SELECT
+{
+	border-right: red thin solid;
+	border-top: red thin solid;
+	font-size: 10pt;
+	border-left: red thin solid;
+	color: #800000;
+	line-height: normal;
+	border-bottom: red thin solid;
+	font-family: 'Times New Roman';
+	background-color: #ffffff;
+}
+
+A.external:link
+{
+	font-weight: bold;
+	font-size: 10pt;
+	color: #000000;
+}
+A.external:active
+{
+	font-weight: bold;
+	font-size: 10pt;
+	color: #000000;
+}
+A.external:hover
+{
+	font-weight: bold;
+	font-size: 10pt;
+	color: #000000;
+	font-variant: normal;
+	text-decoration: underline;
+}
+A.external:visited
+{
+	font-weight: bold;
+	font-size: 10pt;
+	color: #000000;
+}
+A.main:link
+{
+	font-weight: bold;
+	font-size: 10pt;
+	color: blue;
+}
+A.main:active
+{
+	font-weight: bold;
+	font-size: 10pt;
+	color: blue;
+}
+A.main:hover
+{
+	font-weight: bold;
+	font-size: 10pt;
+	color: blue;
+}
+A.main:visited
+{
+	font-weight: bold;
+	font-size: 10pt;
+	color: blue;
+}
+.pageBottom
+{
+	border-right: medium none;
+	border-top: medium none;
+	border-left: medium none;
+	border-bottom: medium none;
+	background-color: transparent;
+}
+.PromptOver
+{
+	padding: 0px;
+	margin: 0px;
+	font-weight: bold;
+	font-size: 12px;
+	filter: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#e88810,endColorStr=#fef9d3 );
+	color: black;
+	font-family: 'Verdana';
+}
+.PromptSelected
+{
+	padding: 0px;
+	margin: 0px;
+	font-size: 12px;
+	filter: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#6287d6,endColorStr=#093993);
+	color: white;
+	font-family: 'Verdana';
+}
+.PromptNormal
+{
+	padding: 0px;
+	margin: 0px;
+	font-size: 12px;
+	filter: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#a2c1f5,endColorStr=#c4dafb);
+	font-family: Verdana;
+	height: 20px;
+}
+.menunormal
+{
+	padding: 0px;
+	margin: 0px;
+	text-align: center;
+	width: 100px;
+	height: 20px;
+}
+.gridviewreport
+{
+	color: #000000;
+	text-align: right;
+}
+.gridviewheader
+{
+	background-color: #1E90FF;
+	color: #FFFFFF;
+}
+.gridviewclientportion
+{
+	background-color: #FFFFEA;
+}
+.gridviewfilterportion
+{
+	background-color: #D9ECFF;
+}
+.gridviewforgportion
+{
+	background-color: #E1E1FF;
+}
+
+/* Themes */
+.headertable
+{
+	border: 1px solid #1E90FF;
+	padding: 1px;
+	width: 100%;
+	vertical-align: middle;
+}
+.headerlogo
+{
+	width: 115px;
+	border: 1px solid #1E90FF;
+	vertical-align: middle;
+	text-align: center;
+	background-color: #FFFFFF;
+}
+.headeruserinfo
+{
+	border: 1px solid #1E90FF;
+	background-color: #1E90FF;
+	vertical-align: middle;
+	width: 100%;
+}
+.applicationnametd
+{
+	border: 1px solid #1E90FF;
+	width: 100%;
+	vertical-align: middle;
+	text-align: center;
+	background-color: #336699;
+}
+.applicationHeader
+{
+	border: 1px solid #1E90FF;
+	width: 100%;
+	vertical-align: middle;
+	background-color: #336699;
+}
+.hyperlinkmasterpage
+{
+	color: #0066FF;
+	font-weight: bold;
+	font-size: 12px;
+  font-family: Arial;
+}
+.labelmasterpage
+{
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #ffffff; 
+}
+.labelapplicationnamemasterpage
+{
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #ffffff; 
+}
+.labelmasterpagefooter
+{
+	FONT-SIZE: 12px; COLOR: #000000; 
+}
+.LabelMandatory
+{
+	color: #FF3300;
+	font-family: Arial;
+	font-size: 12px;
+}
+.LabelBlack
+{
+	color: #000000;
+	font-family: Arial;
+	font-size: 12px;
+}
+.LabelWhite
+{
+	color: #FFFFFF;
+	font-family: Arial;
+	font-size: 12px;
+}
+.LabelWhiteBold
+{
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 12px;
+  font-family: Arial;
+}
+.LabelWhiteBoldX
+{
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 14px;
+  font-family: Arial;
+}
+.LabelBlackBold
+{
+	color: #000000;
+	font-weight: bold;
+	font-size: 12px;
+  font-family: Arial;
+}
+.LabelBlackBoldX
+{
+	color: #000000;
+	font-weight: bold;
+	font-size: 14px;
+  font-family: Arial;
+}
+.LabelMandatoryBold
+{
+	color: #FF3300;
+	font-weight: bold;
+	font-size: 12px;
+  font-family: Arial;
+}
+.LabelMandatoryBoldX
+{
+	color: #FF3300;
+	font-weight: bold;
+	font-size: 14px;
+  font-family: Arial;
+}
+.LabelRedBoldX
+{
+	color: #FF3300;
+	font-weight: bold;
+	font-size: 12px;
+  font-family: Arial;
+}
+.LabelBlue
+{
+color: #1E90FF;
+font-family: Arial;
+font-size: 12px;
+}
+.LabelBlueBold
+{
+color: #1E90FF;
+	font-weight: bold;
+	font-size: 12px;
+  font-family: Arial;
+}
+.LabelBlueBoldX
+{
+color: #1E90FF;
+	font-weight: bold;
+	font-size: 14px;
+  font-family: Arial;
+}
+.LabelDefault
+{
+	color: #000000;
+	font-family: Arial;
+	font-size: 12px;
+}
+.LabelMapRed
+{
+	color: #FF0000;
+	font-family: Arial;
+	font-size: 10px;
+}
+.LabelMapBlue
+{
+	color: #0000FF;
+	font-family: Arial;
+	font-size: 10px;
+}
+.themebaralign
+{
+	margin: 0px 5px 0px 0px;
+	float: right;
+}
+.listboxblack
+{
+	color: #000000;
+}
+.dropdownlistblack
+{
+	color: #000000;
+}
+.PopHeaderText
+    {
+        font-family: Verdana;
+        font-size: 13px;
+        font-weight: 600;
+        color: #FFFFFF;
+        font-style: normal;
+        text-transform: none;
+    }
+ .grid
+{
+	border: 1px solid #000000;
+	font-family: Tahoma;
+	font-size: 12px;
+	width: 100%;
+}
+td.menuoff
+{
+	padding: 0px;
+	margin: 0px;
+	font-size: 12px;
+	filter: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#6287d6,endColorStr=#093993);
+	color: #FFFFFF;
+	font-family: 'Verdana';
+	text-decoration: none;
+	vertical-align: middle;
+	text-align: center;
+	
+	width: 75px;
+	line-height: 25px;
+	height: 25px;
+}
+td.menuon
+{
+	padding: 0px;
+	margin: 0px;
+	font-size: 12px;
+	filter: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#a2c1f5,endColorStr=#c4dafb);
+	font-family: Verdana;
+	vertical-align: middle;
+	text-align: center;
+	width: 75px;
+	line-height: 25px;
+	height: 25px;
+	
+}
+
+td.menuselect
+{
+	padding: 0px;
+	margin: 0px;
+	font-size: 12px;
+	filter: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#6287d6,endColorStr=#093993);
+	color: white;
+	font-family: 'Verdana';
+	vertical-align: middle;
+	text-align: center;
+	width: 75px;
+	line-height: 25px;
+	height: 25px;
+}
+.menulink
+{
+	color: #FFFFFF;
+	text-decoration: none;
+	font-size: 12px;	
+	
+}
+.modalBackground {
+      background-color:Gray;
+      filter:alpha(opacity=70);
+      opacity:0.7; 
+       
+}
+
+
+.modalPopup {
+      background-color:#f5fffa;
+      border-width:0px;
+      border-style:solid;
+      border-color:#000000;
+      padding:3px;
+      width:250px;
+}
+.updateProgress 
+{ 
+    position: absolute; 
+    width: 200px; 
+    height: 24px; 
+    background-color:Orange; 
+    border:solid 1px #000000; 
+    text-align:center; 
+    font-size:12px; 
+    font-weight:bold;
+} 
+/***********************AJAX UPLOADER CSS******************************/
+
+.AjaxUploaderPanel
+{
+	width:400px; 
+	height:120px; 
+	border:solid 1px DodgerBlue; 
+	background-color:#FFFFFF;
+	
+}
+
+.AjaxUploaderCancelAllButton{display:none;}
+
+input[disabled="disabled"][type="button"]
+{
+color: Gray;
+}
+
+input[disabled="disabled"][type="submit"]
+{
+color: Gray;
+}
+
+.ButtonDisabledJava
+{
+	border-left-color: #CCCCCC;
+	border-bottom-color: #CCCCCC;
+	font: 10px Arial,Tahoma,Verdana,Helvetica, sans-serif;
+	color: Gray;
+	border-top-color: #CCCCCC;
+	height: 24px;
+	background-color: white;
+	border-right-color: #CCCCCC;
+}
+.DDDMandatoryProductJava
+{
+	background-color:#FFFF00;
+	border: 1px solid #FFFF00;
+	 color:#FFFF00;
+}
+.DDDResetwhiteJava
+{
+	background-color:#000000;
+}  
+.DropDownMenuColor
+{
+	background-color:White;
+}
+.GridBGC
+{
+	border-color:#1E90FF;
+	background-color:#336699;
+	font-weight: bold;
+	font-size: 12px;
+	color: #ffffff;
+}    
+.GridTxtA
+{
+	 width:130px;
+	 height:30px; 
+	 border: 1px solid black; 
+}    
+  

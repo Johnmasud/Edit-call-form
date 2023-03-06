@@ -1,0 +1,55 @@
+﻿.bibar
+{
+	padding: 0px 0px 5px 0px;
+	margin: 5px 0px 5px 0px;
+	height: 20px;
+}
+.NormalLinkButton
+{
+        width: 135px;
+        height: 20px;
+        line-height: 20px;
+        vertical-align: middle;
+        text-align: center;
+        background-color: #1E90FF;
+        display: block;
+        font-family: Verdana;
+        font-size: 12px;
+        filter: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#a2c1f5,endColorStr=#c4dafb);
+}
+.NormalLinkButton:link
+{
+	
+	color: black;
+	text-decoration: none;
+}
+.NormalLinkButton:hover
+{
+        color: black;
+        background-color: #9FB8FF;
+        text-decoration: none;
+        font-weight: bold;
+        filter: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#e88810,endColorStr=#fef9d3 );
+}
+.SelectedLinkButton
+{
+        width: 135px;
+        height: 20px;
+        line-height: 20px;
+        vertical-align: middle;
+        text-align: center;
+        background-color: #0066CC;
+        display: block;
+        font-family: Verdana;
+        font-size: 12px;
+        filter: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#4896DE,endColorStr=#003366);
+}
+.SelectedLinkButton:link
+{
+        color: white;
+        text-decoration: none;
+}
+.SelectedLinkButton:hover
+{
+	
+}

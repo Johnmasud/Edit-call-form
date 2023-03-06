@@ -1,0 +1,95 @@
+﻿<%--
+Default skin template. The following skins are provided as examples only.
+
+1. Named control skin. The SkinId should be uniquely defined because
+   duplicate SkinId's per control type are not allowed in the same theme.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Default skin. The SkinId is not defined. Only one default 
+   control skin per control type is allowed in the same theme.
+
+--%>
+
+
+<%--
+Skins For Label ASP Control
+--%>
+<asp:Label runat="server"></asp:Label>
+<asp:Label runat="server" SkinId="LabelMandatorySkin" CssClass="LabelMandatory"></asp:Label>
+<asp:Label runat="server" SkinId="LabelBlackSkin" CssClass="LabelBlack"></asp:Label>
+<asp:Label runat="server" SkinId="LabelWhiteSkin" CssClass="LabelWhite"></asp:Label>
+<asp:Label runat="server" SkinId="LabelBlueSkin" CssClass="LabelBlue"></asp:Label>
+<asp:Label runat="server" SkinId="LabelMandatoryBoldSkin" CssClass="LabelMandatoryBold"></asp:Label>
+<asp:Label runat="server" SkinId="LabelMandatoryBoldXSkin" CssClass="LabelMandatoryBoldX"></asp:Label>
+<asp:Label runat="server" SkinId="LabelRedBoldXSkin" CssClass="LabelRedBoldX"></asp:Label>
+<asp:Label runat="server" SkinId="LabelBlackBoldSkin" CssClass="LabelBlackBold"></asp:Label>
+<asp:Label runat="server" SkinId="LabelBlackBoldXSkin" CssClass="LabelBlackBoldX"></asp:Label>
+<asp:Label runat="server" SkinId="LabelWhiteBoldSkin" CssClass="LabelWhiteBold"></asp:Label>
+<asp:Label runat="server" SkinId="LabelWhiteBoldXSkin" CssClass="LabelWhiteBoldX"></asp:Label>
+<asp:Label runat="server" SkinId="LabelBlueBoldSkin" CssClass="LabelBlueBold"></asp:Label>
+<asp:Label runat="server" SkinId="LabelBlueBoldXSkin" CssClass="LabelBlueBoldX"></asp:Label>
+
+<asp:Label runat="server" SkinId="LabelMasterPageHeaderSkin" CssClass="labelmasterpage"></asp:Label>
+<asp:Label runat="server" SkinId="LabelMasterPageApplicationNameSkin" CssClass="labelapplicationnamemasterpage"></asp:Label>
+<asp:Label runat="server" SkinId="LabelMasterPageFooterSkin" CssClass="labelmasterpagefooter"></asp:Label>
+<%-- AJAX UPLOADER SKINS--%>
+<asp:Label runat="Server" CssClass="AjaxUploaderPanel" SkinId="AjaxUploaderPanelSkin"></asp:Label>
+<%--
+Skins For HyperLink ASP Control
+--%>
+<asp:HyperLink runat="server" ></asp:HyperLink>
+<asp:HyperLink runat="server" SkinId="HyperLinkMasterPageSkin" CssClass="hyperlinkmasterpage"></asp:HyperLink>
+
+<%--
+Skins For Linkbutton ASP Control
+--%>
+<asp:LinkButton runat="server"></asp:LinkButton>
+<asp:LinkButton runat="server" SkinId="HyperLinkMasterPageSkin" CssClass="hyperlinkmasterpage"></asp:LinkButton>
+
+<%--
+Skins For Button ASP Control
+--%>
+<asp:Button runat="server" class="Button"/>
+
+<%--
+Skins For Calendar ASP Control
+--%>
+<asp:Calendar runat="server">
+</asp:Calendar>
+<asp:Calendar runat="server" SkinId="CalendarSkin" BackColor="White" CellPadding="1" CellSpacing="1" ForeColor="#003399" >
+<SelectedDayStyle BackColor="#009999" Font-Bold="True" ForeColor="#CCFF99" />
+<SelectorStyle BackColor="#99CCCC" ForeColor="#336666" />
+<WeekendDayStyle BackColor="#CCCCFF" />
+<TodayDayStyle BackColor="#99CCCC" ForeColor="White" />
+<OtherMonthDayStyle ForeColor="#999999" />
+<DayStyle BorderColor="Black" BorderStyle="Ridge" BorderWidth="1px" />
+<NextPrevStyle Font-Size="8pt" ForeColor="#CCCCFF" />
+<DayHeaderStyle BackColor="#99CCCC" ForeColor="#336666" Height="1px" />
+<TitleStyle BackColor="#003399" BorderColor="#3366CC" BorderWidth="1px" Font-Bold="True" Font-Size="10pt" ForeColor="#CCCCFF" Height="25px" />
+</asp:Calendar>
+
+<%--
+Skins For DetailsView ASP Control
+--%>
+<asp:DetailsView runat="server" >
+</asp:DetailsView>
+<asp:DetailsView runat="server" SkinId="DetailsViewPlainSkin" BorderWidth="0px" CellPadding="1" CellSpacing="1" >
+<FieldHeaderStyle Width="15%" />
+</asp:DetailsView>
+
+<%--
+Skins For GridView ASP Control
+--%>
+<asp:GridView runat="server" >
+</asp:GridView>
+<asp:GridView runat="server" SkinId="gridviewSkin" RowStyle-CssClass="gridviewreport" CellPadding="3" CellSpacing="1">
+<RowStyle CssClass="gridviewreport"></RowStyle>
+<HeaderStyle CssClass="gridviewheader" />
+</asp:GridView>
+<asp:ListBox runat="server" ></asp:ListBox>  
+<asp:ListBox runat="server" SkinId="ForeBlackSkin" CssClass="listboxblack"></asp:ListBox> 
+<asp:DropDownList runat="server"></asp:DropDownList>   
+<asp:DropDownList runat="server" SkinId="ForeBlackSkin" CssClass="dropdownlistblack"></asp:DropDownList>   

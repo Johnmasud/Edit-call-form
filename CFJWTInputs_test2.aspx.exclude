@@ -1,0 +1,19 @@
+<%@ Page Language="C#"  MasterPageFile="~/MasterPage.master"  Title="SPAR - Internet Call Form Input" EnableViewStateMac="false" AutoEventWireup="true" CodeFile="CFJWTInputs_test2.aspx.cs" 
+Inherits="CFJWTInputs_test2"  %>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+
+
+
+<script type="text/javascript" language="javascript1.1">
+	function Load()
+	{
+	   // alert("test");
+	}
+
+</script>
+ 
+
+    <asp:Label ID="Label1" runat="server" Text="test"></asp:Label>
+
+</asp:Content>
+
